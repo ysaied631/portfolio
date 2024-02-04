@@ -4,22 +4,45 @@ import { CardInfo } from './TimelineData';
 
 export interface TimelineCardProps extends CardInfo {
   cardWidth: number;
+  invert?: boolean;
 }
 
-const TimelineCard = ({ cardWidth, title, body }: TimelineCardProps) => {
-  const width = `w-[${cardWidth}%]`;
-  const spaceWidth = Math.round(cardWidth * 0.25);
-  const space = 'mr-[' + spaceWidth + '%]';
+const TimelineCard = ({
+  cardWidth,
+  invert,
+  title,
+  body,
+  time,
+}: TimelineCardProps) => {
+  const spaceWidth = Math.round(cardWidth * 0.5);
+
   return (
     <div
-      className={classNames({
-        'flex flex-col border border-white text-center': true,
-        [width]: true,
-        [space]: true,
-      })}
+      className="flex flex-row justify-stretch"
+      style={{ width: `${cardWidth}%` }}
     >
-      <span className="font-semibold">{title}</span>
-      <span>{body}</span>
+      <div
+        className={classNames({ hidden: true, 'md:block': invert })}
+        style={{ width: `${spaceWidth}%` }}
+      />
+      <div
+        className={classNames({
+          'flex w-full items-center': true,
+          'flex-col': invert,
+          'flex-col-reverse justify-end': !invert,
+        })}
+      >
+        <div className="my-1 hidden h-8 w-1 rounded border border-white md:block" />
+        <div className="flex w-full flex-col rounded border border-white px-4 py-3 text-center">
+          <span className="font-semibold">{title}</span>
+          <span>{body}</span>
+          <span className="mr-4 self-end">{time}</span>
+        </div>
+      </div>
+      <div
+        className={classNames({ hidden: true, 'md:block': !invert })}
+        style={{ width: `${spaceWidth}%` }}
+      />
     </div>
   );
 };

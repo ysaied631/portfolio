@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Logo from './components/Logo';
-import MobileNav from './components/MobileNav';
 import Sidebar from './components/Sidebar';
 import SlideIn from './components/SlideIn';
 import Introduction from './components/Introduction';
@@ -11,32 +10,28 @@ const App = () => {
   const [direction, setDirection] = useState<'asc' | 'desc'>('desc');
 
   return (
-    <div className="h-screen w-screen overflow-hidden">
-      <div className="absolute left-14 top-10 z-20 hidden md:block">
+    <div className="w-screen md:h-screen md:overflow-hidden">
+      <div className="absolute left-14 top-10 z-20 md:fixed">
         <Logo />
       </div>
-      <div className="absolute top-0 z-20 block md:hidden">
-        <MobileNav />
-      </div>
-      <div className="absolute right-[5vw] top-14 z-20 float-right hidden h-[80vh] md:block">
+      <div className="fixed right-[5vw] top-14 z-20 float-right h-[80vh]">
         <Sidebar page={page} setPage={setPage} setDirection={setDirection} />
       </div>
-      <div className="absolute left-0 top-0 z-10 flex w-screen flex-col">
+      {/* MOBILE CONTENT */}
+      <div className="z-10 my-[20vh] flex flex-col items-center gap-[20vh] md:hidden">
+        <Introduction />
+        <Timeline />
+      </div>
+      {/* DESKTOP CONTENT */}
+      <div className="z-10 hidden h-full flex-col md:flex">
         <SlideIn show={page === 0} direction={direction}>
-          <div className="flex h-screen items-center justify-center">
+          <div className="flex h-full items-center justify-center">
             <Introduction />
           </div>
         </SlideIn>
         <SlideIn show={page === 1} direction={direction}>
-          <div className="flex h-screen items-center justify-center">
+          <div className="flex h-full items-center justify-center">
             <Timeline />
-          </div>
-        </SlideIn>
-        <SlideIn show={page === 2} direction={direction}>
-          <div className="flex h-screen items-center justify-center">
-            <div>
-              <img src="./youcef-profile-pic.png" width={400} />
-            </div>
           </div>
         </SlideIn>
       </div>

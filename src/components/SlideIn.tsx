@@ -26,6 +26,7 @@ const SlideIn = ({
         'opacity-0 ' +
         (direction === 'asc' ? '-translate-y-full' : 'translate-y-full')
       }
+      className="h-full"
     >
       {children}
     </Transition>

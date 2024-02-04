@@ -4,14 +4,20 @@ import { CardInfo } from './TimelineData';
 
 interface TimelineRowProps {
   cards: CardInfo[];
+  invert?: boolean;
 }
 
-const TimelineRow = ({ cards }: TimelineRowProps) => {
-  const cardWidth = Math.round((1 / (cards.length + 1)) * 100);
+const TimelineRow = ({ cards, invert }: TimelineRowProps) => {
+  const cardWidth = Math.round((1 / (cards.length + 1)) * 150);
   return (
-    <div className="my-8 flex flex-row">
+    <div className="flex flex-col items-center gap-8 md:flex-row md:gap-0">
       {cards.map((card, i) => (
-        <TimelineCard key={`row_${i}`} cardWidth={cardWidth} {...card} />
+        <TimelineCard
+          key={`row_${i}`}
+          cardWidth={cardWidth}
+          invert={invert}
+          {...card}
+        />
       ))}
     </div>
   );

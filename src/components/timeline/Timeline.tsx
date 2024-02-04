@@ -11,10 +11,13 @@ const Timeline = () => {
   );
 
   return (
-    <div className="flex w-4/5 flex-col">
+    <div className="flex w-4/5 flex-col gap-8 md:gap-0">
+      <h2 className="text-center text-base font-semibold sm:text-lg md:mb-8 md:text-xl lg:text-2xl">
+        Experience & Education
+      </h2>
       <TimelineRow cards={topRow} />
-      <div className="border border-white"></div>
-      <TimelineRow cards={bottomRow} />
+      <div className="hidden border border-white md:block"></div>
+      <TimelineRow cards={bottomRow} invert />
     </div>
   );
 };

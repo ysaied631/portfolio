@@ -14,7 +14,7 @@ const Sidebar = ({ page, setPage, setDirection }: SidebarProps) => {
       <div className="h-1/2">
         <Contact />
       </div>
-      <div className="h-1/3">
+      <div className="hidden h-1/3 md:block">
         <Pagination page={page} setPage={setPage} setDirection={setDirection} />
       </div>
     </div>

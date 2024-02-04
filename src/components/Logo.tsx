@@ -10,7 +10,7 @@ const Logo = () => {
         height={60}
         className="rounded-3xl"
       />
-      <h1 className="hidden font-mono text-base md:block md:text-xl xl:text-3xl">
+      <h1 className="hidden font-mono text-base font-semibold md:block md:text-xl xl:text-3xl">
         Youcef Saied
       </h1>
     </div>

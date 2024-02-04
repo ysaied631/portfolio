@@ -2,9 +2,9 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className="flex flex-row items-center justify-center gap-4 md:flex-col">
+    <div className="flex flex-col items-center justify-center gap-4">
       <a
-        href="www.linkedin.com/in/youcef-s-8a7804166"
+        href="https://www.linkedin.com/in/youcef-s-8a7804166"
         className="cursor-pointer no-underline"
       >
         <img
