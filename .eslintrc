@@ -16,5 +16,7 @@
     "sourceType": "module",
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
-  "rules": {},
+  "rules": {
+    "@typescript-eslint/no-explicit-any": 1,
+  },
 }

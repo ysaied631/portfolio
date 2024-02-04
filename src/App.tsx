@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import SlideIn from './components/SlideIn';
 import Introduction from './components/Introduction';
 import Timeline from './components/timeline';
+import Skills from './components/Skills';
 
 const App = () => {
   const [page, setPage] = useState<number>(0);
@@ -21,6 +22,7 @@ const App = () => {
       <div className="z-10 my-[20vh] flex flex-col items-center gap-[20vh] md:hidden">
         <Introduction />
         <Timeline />
+        <Skills />
       </div>
       {/* DESKTOP CONTENT */}
       <div className="z-10 hidden h-full flex-col md:flex">
@@ -32,6 +34,11 @@ const App = () => {
         <SlideIn show={page === 1} direction={direction}>
           <div className="flex h-full items-center justify-center">
             <Timeline />
+          </div>
+        </SlideIn>
+        <SlideIn show={page === 2} direction={direction}>
+          <div className="flex h-full items-center justify-center">
+            <Skills />
           </div>
         </SlideIn>
       </div>
