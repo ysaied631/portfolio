@@ -27,19 +27,13 @@ const App = () => {
       {/* DESKTOP CONTENT */}
       <div className="z-10 hidden h-full flex-col md:flex">
         <SlideIn show={page === 0} direction={direction}>
-          <div className="flex h-full items-center justify-center">
-            <Introduction />
-          </div>
+          <Introduction />
         </SlideIn>
         <SlideIn show={page === 1} direction={direction}>
-          <div className="flex h-full items-center justify-center">
-            <Timeline />
-          </div>
+          <Timeline />
         </SlideIn>
         <SlideIn show={page === 2} direction={direction}>
-          <div className="flex h-full items-center justify-center">
-            <Skills />
-          </div>
+          <Skills />
         </SlideIn>
       </div>
     </div>
