@@ -4,6 +4,7 @@ import MobileNav from './components/MobileNav';
 import Sidebar from './components/Sidebar';
 import SlideIn from './components/SlideIn';
 import Introduction from './components/Introduction';
+import Timeline from './components/timeline';
 
 const App = () => {
   const [page, setPage] = useState<number>(0);
@@ -28,9 +29,7 @@ const App = () => {
         </SlideIn>
         <SlideIn show={page === 1} direction={direction}>
           <div className="flex h-screen items-center justify-center">
-            <div>
-              <img src="./youcef-profile-pic.png" width={400} />
-            </div>
+            <Timeline />
           </div>
         </SlideIn>
         <SlideIn show={page === 2} direction={direction}>
