@@ -10,7 +10,7 @@ interface TimelineRowProps {
 const TimelineRow = ({ cards, invert }: TimelineRowProps) => {
   const cardWidth = Math.round((1 / (cards.length + 1)) * 150);
   return (
-    <div className="flex flex-col items-center gap-8 md:flex-row md:gap-0">
+    <div className="flex flex-col items-center gap-8 md:flex-row md:items-end md:gap-0">
       {cards.map((card, i) => (
         <TimelineCard
           key={`row_${i}`}

@@ -5,6 +5,7 @@ import SlideIn from './components/SlideIn';
 import Introduction from './components/Introduction';
 import Timeline from './components/timeline';
 import Skills from './components/Skills';
+import Carousel from './components/carousel';
 
 const App = () => {
   const [page, setPage] = useState<number>(0);
@@ -34,6 +35,25 @@ const App = () => {
         </SlideIn>
         <SlideIn show={page === 2} direction={direction}>
           <Skills />
+        </SlideIn>
+        <SlideIn show={page === 3} direction={direction}>
+          <Carousel>
+            <img
+              src="./work-images/PiratesDice1.png"
+              alt="Pirates Dice Main Menu"
+              className="h-full w-full"
+            />
+            <img
+              src="./work-images/PiratesDice2.png"
+              alt="Pirates Dice Game Screen"
+              className="h-full w-full"
+            />
+            <img
+              src="./work-images/PiratesDice3.png"
+              alt="Pirates Dice Leaderboard Screen"
+              className="h-full w-full"
+            />
+          </Carousel>
         </SlideIn>
       </div>
     </div>

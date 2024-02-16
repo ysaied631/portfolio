@@ -8,7 +8,7 @@ const Contact = () => {
         className="cursor-pointer no-underline"
       >
         <img
-          src="./icons/linkedin.svg"
+          src="./icons/Linkedin.svg"
           alt="LinkedIn Profile"
           width={32}
           height={32}
@@ -19,7 +19,7 @@ const Contact = () => {
         className="cursor-pointer no-underline"
       >
         <img
-          src="./icons/github.svg"
+          src="./icons/Github.svg"
           alt="Github Profile"
           width={32}
           height={32}
@@ -29,7 +29,7 @@ const Contact = () => {
         href="mailto:youcef.saied@live.co.uk"
         className="cursor-pointer no-underline"
       >
-        <img src="./icons/email.svg" alt="Email" width={32} height={32} />
+        <img src="./icons/Email.svg" alt="Email" width={32} height={32} />
       </a>
     </div>
   );

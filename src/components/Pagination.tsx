@@ -8,7 +8,7 @@ interface PaginationProps {
 }
 
 const Pagination = ({ page, setPage, setDirection }: PaginationProps) => {
-  const totalPages = 5;
+  const totalPages = 4;
 
   return (
     <div>

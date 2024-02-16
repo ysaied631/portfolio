@@ -14,7 +14,7 @@ const Introduction = () => {
         </h2>
       </div>
       <img
-        src="./youcef-profile-pic.png"
+        src="./YoucefProfilePic.png"
         alt="Youcef Smiling"
         className="w-4/5 rounded-lg md:w-1/3"
       />

@@ -4,8 +4,8 @@ const Logo = () => {
   return (
     <div className="flex flex-row items-center gap-6">
       <img
-        src="./youcef-icon.png"
-        alt="Youcef-Logo"
+        src="./YoucefIcon.png"
+        alt="Youcef Logo"
         width={60}
         height={60}
         className="rounded-3xl"
