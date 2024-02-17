@@ -2,7 +2,6 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://ysaied631.github.io/portfolio/",
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@testing-library/jest-dom": "^5.17.0",
